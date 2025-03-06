@@ -70,7 +70,12 @@ const Header: React.FC = () => {
             >
               <span>MATRIX NEO GPT</span>
             </a>
-            <div className="flex items-center space-x-2">
+            <a 
+              href="https://chatgpt.com/g/g-nhD44KqqU-matrix-neo-gpt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200"
+            >
               <span>FOLLOW THE WHITE RABBIT</span>
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
                 <path d="M12 5C12 6.65685 10.6569 8 9 8C7.34315 8 6 6.65685 6 5C6 3.34315 7.34315 2 9 2C10.6569 2 12 3.34315 12 5Z" fill="#ffffff"/>
@@ -78,7 +83,7 @@ const Header: React.FC = () => {
                 <path d="M14.5 21.9999C14.5 21.9999 14.5 21.9999 14.5 21.9999C14.5 20.0669 12.5 14.5 12.5 14.5C12.5 14.5 10.5 20.0669 10.5 21.9999H14.5Z" fill="#ffffff"/>
                 <path d="M15 11C15 12.1046 14.1046 13 13 13H12H11C9.89543 13 9 12.1046 9 11V10C9 9.44772 9.44772 9 10 9H14C14.5523 9 15 9.44772 15 10V11Z" fill="#ffffff"/>
               </svg>
-            </div>
+            </a>
             <a href="#faq" className="text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200">
               FAQ
             </a>
@@ -121,7 +126,13 @@ const Header: React.FC = () => {
           >
             MATRIX NEO GPT
           </a>
-          <div className="flex items-center space-x-2 py-2">
+          <a 
+            href="https://chatgpt.com/g/g-nhD44KqqU-matrix-neo-gpt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 py-2 text-matrix-green hover:text-matrix-lightgreen transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
             <span>FOLLOW THE WHITE RABBIT</span>
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
               <path d="M12 5C12 6.65685 10.6569 8 9 8C7.34315 8 6 6.65685 6 5C6 3.34315 7.34315 2 9 2C10.6569 2 12 3.34315 12 5Z" fill="#ffffff"/>
@@ -129,7 +140,7 @@ const Header: React.FC = () => {
               <path d="M14.5 21.9999C14.5 21.9999 14.5 21.9999 14.5 21.9999C14.5 20.0669 12.5 14.5 12.5 14.5C12.5 14.5 10.5 20.0669 10.5 21.9999H14.5Z" fill="#ffffff"/>
               <path d="M15 11C15 12.1046 14.1046 13 13 13H12H11C9.89543 13 9 12.1046 9 11V10C9 9.44772 9.44772 9 10 9H14C14.5523 9 15 9.44772 15 10V11Z" fill="#ffffff"/>
             </svg>
-          </div>
+          </a>
           <a 
             href="#faq" 
             className="block text-matrix-green hover:text-matrix-lightgreen py-2 transition-colors"
