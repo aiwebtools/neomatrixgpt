@@ -102,7 +102,7 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Video Section */}
+      {/* Video Section - Moved below the Feature section */}
       <VideoSection />
       
       {/* Testimonial Section */}
