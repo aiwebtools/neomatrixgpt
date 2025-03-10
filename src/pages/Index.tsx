@@ -9,6 +9,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import FaqSection from '../components/FaqSection';
 import DisclaimerSection from '../components/DisclaimerSection';
 import FallingCode from '../components/FallingCode';
+import DisclaimerPopup from '../components/DisclaimerPopup';
 import { Code, Brain, Rabbit, Upload, MessageSquare, Key } from 'lucide-react';
 
 const Index = () => {
@@ -39,6 +40,9 @@ const Index = () => {
     <div className="min-h-screen bg-matrix-black text-matrix-green overflow-x-hidden">
       {/* Matrix Code Animation Background */}
       <FallingCode />
+      
+      {/* Disclaimer Popup */}
+      <DisclaimerPopup />
       
       {/* Header */}
       <Header />

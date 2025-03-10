@@ -73,7 +73,9 @@ export default {
 			},
 			fontFamily: {
 				mono: ['Courier New', 'monospace'],
-				sans: ['Inter', 'sans-serif']
+				sans: ['Inter', 'sans-serif'],
+				matrix: ['"Share Tech Mono"', 'monospace'],
+				cyber: ['"Rajdhani"', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
