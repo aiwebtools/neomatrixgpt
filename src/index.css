@@ -93,22 +93,6 @@
   .matrix-rain-char {
     @apply absolute text-matrix-green opacity-0 animate-matrix-rain whitespace-pre;
   }
-  
-  /* Custom styles for ElevenLabs widget */
-  #elevenlabs-widget-container {
-    @apply rounded-xl overflow-hidden border-2 border-matrix-green shadow-lg shadow-matrix-green/30;
-  }
-  
-  /* Override ElevenLabs widget styles to match Matrix theme */
-  elevenlabs-convai {
-    --bg-primary: var(--matrix-black);
-    --bg-secondary: var(--matrix-darkgreen);
-    --text-primary: var(--matrix-green);
-    --accent: var(--matrix-green);
-    --accent-hover: var(--matrix-lightgreen);
-    
-    font-family: 'Share Tech Mono', monospace !important;
-  }
 }
 
 /* Adding perspective for 3D effects */
@@ -137,11 +121,4 @@
   to {
     stroke-dashoffset: 0;
   }
-}
-
-/* Custom styles for ElevenLabs widget iframe */
-elevenlabs-convai::part(iframe) {
-  border: 1px solid #00FF41 !important;
-  border-radius: 8px !important;
-  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3) !important;
 }
