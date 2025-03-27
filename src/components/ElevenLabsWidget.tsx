@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { MessageSquare, Phone } from 'lucide-react';
  
 // API key configuration
@@ -7,40 +7,9 @@ const ELEVEN_LABS_API_KEY = "sk_d4ba415b39332fdbfc89f2ee1eb32967ed650b6c1b71b4a2
 
 const ElevenLabsWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  
-  useEffect(() => {
-    // Set Eleven Labs API key globally
-    if (window.ElevenLabsConvai) {
-      window.ElevenLabsConvai.setAPIKey(ELEVEN_LABS_API_KEY);
-      setIsLoaded(true);
-    } else {
-      // Wait for the widget to load
-      const checkInterval = setInterval(() => {
-        if (window.ElevenLabsConvai) {
-          window.ElevenLabsConvai.setAPIKey(ELEVEN_LABS_API_KEY);
-          setIsLoaded(true);
-          clearInterval(checkInterval);
-        }
-      }, 500);
-      
-      // Clear interval on component unmount
-      return () => clearInterval(checkInterval);
-    }
-  }, []);
   
   const toggleWidget = () => {
     setIsOpen(!isOpen);
-    
-    // If the widget is first being opened, initialize it
-    if (!isOpen && isLoaded) {
-      const widgetContainer = document.getElementById('elevenlabs-widget-container');
-      if (widgetContainer && widgetContainer.children.length === 0) {
-        const widget = document.createElement('elevenlabs-convai');
-        widget.setAttribute('agent-id', 'n3MHWTh0w5IAaUo1aAJE');
-        widgetContainer.appendChild(widget);
-      }
-    }
   };
   
   return (
@@ -60,7 +29,6 @@ const ElevenLabsWidget = () => {
       
       {/* Widget container */}
       <div 
-        id="elevenlabs-widget-container" 
         className={`mt-4 transform transition-all duration-300 origin-bottom-right ${
           isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
         }`}
@@ -71,7 +39,13 @@ const ElevenLabsWidget = () => {
           maxHeight: '70vh'
         }}
       >
-        {/* Widget will be inserted here via JS */}
+        {/* Directly embed the Eleven Labs widget */}
+        {isOpen && (
+          <elevenlabs-convai 
+            agent-id="n3MHWTh0w5IAaUo1aAJE"
+            className="w-full h-full rounded-xl overflow-hidden border-2 border-matrix-green shadow-lg shadow-matrix-green/30"
+          ></elevenlabs-convai>
+        )}
       </div>
       
       {/* Custom Matrix-themed label */}
@@ -90,10 +64,12 @@ const ElevenLabsWidget = () => {
 
 // Add TypeScript global declaration for Eleven Labs widget
 declare global {
-  interface Window {
-    ElevenLabsConvai?: {
-      setAPIKey: (key: string) => void;
-    };
+  namespace JSX {
+    interface IntrinsicElements {
+      'elevenlabs-convai': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & {
+        'agent-id'?: string;
+      }, HTMLElement>;
+    }
   }
 }
 
