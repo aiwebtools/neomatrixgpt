@@ -81,7 +81,7 @@ const ElevenLabsWidget = () => {
         }`}
       >
         <span className="text-matrix-green font-matrix text-sm animate-glow">
-          NEO-MATRIX GPT ASSISTANT
+          USE NEO-MATRIX LIVE VOICE MODE HERE
         </span>
       </div>
     </div>
