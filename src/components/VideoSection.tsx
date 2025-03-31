@@ -45,8 +45,8 @@ const VideoSection: React.FC = () => {
             <iframe 
               width="100%" 
               height="100%" 
-              src="https://www.youtube.com/embed/8HKoh-yo2YU?autoplay=1&mute=0&controls=1&rel=0&showinfo=0&modestbranding=1&vq=hd1080" 
-              title="The Matrix - Wake Up Neo"
+              src="https://www.youtube.com/embed/YxpGmoIABWU?autoplay=1&mute=0&controls=1&rel=0&showinfo=0&modestbranding=1&vq=hd1080" 
+              title="The Matrix Simulation Theory"
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen
