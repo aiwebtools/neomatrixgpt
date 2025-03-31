@@ -60,6 +60,26 @@ const VideoSection: React.FC = () => {
             <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-matrix-green z-20"></div>
           </div>
         </div>
+        
+        {/* BECOME IMMORTALIZED Button */}
+        <div className="flex justify-center mt-12 mb-6 animate-pulse-glow">
+          <a 
+            href="https://immortalizeme.lovable.app/?via=aiwebtools" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="neo-button group tracking-wider text-lg border-2 border-matrix-green bg-matrix-black py-3 px-8 hover:bg-matrix-green hover:text-matrix-black transition-all duration-300 shadow-lg shadow-matrix-green/30"
+          >
+            <span className="font-mono mr-2 font-bold">BECOME IMMORTALIZED</span>
+            <svg 
+              className="w-5 h-5 inline-block transition-transform group-hover:translate-x-1" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );
