@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
 
@@ -183,7 +182,7 @@ const Footer: React.FC = () => {
                 Privacy Policy
               </a>
               <a 
-                href="https://aiwebtools.ai/terms-of-services"
+                href="https://aiwebtools.lovable.app/disclaimers"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-matrix-green hover:text-matrix-lightgreen transition-colors text-sm"

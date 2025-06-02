@@ -40,6 +40,12 @@ const DisclaimerSection: React.FC = () => {
         
         <div className="max-w-4xl mx-auto matrix-card">
           <div className="p-6">
+            <div className="mb-6 p-4 border border-matrix-green/30 rounded-lg bg-matrix-green/5">
+              <p className="text-matrix-green/90 text-center font-semibold">
+                This content is provided for informational, educational, and research purposes only.
+              </p>
+            </div>
+            
             <h3 className="text-xl font-bold mb-4">Terms of Use</h3>
             
             <p className="mb-4 text-matrix-green/80">
@@ -77,7 +83,7 @@ const DisclaimerSection: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">Terms of Service</h3>
             
             <p className="mb-4 text-matrix-green/80">
-              For complete information regarding the terms governing your use of Neo-Matrix GPT, please review our <a href="https://aiwebtools.ai/terms-of-services" target="_blank" rel="noopener noreferrer" className="text-matrix-green hover:text-matrix-lightgreen underline">Terms of Service</a>.
+              For complete information regarding the terms governing your use of Neo-Matrix GPT, please review our <a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer" className="text-matrix-green hover:text-matrix-lightgreen underline">Terms of Service</a>.
             </p>
             
             <p className="text-sm text-matrix-green/60 mt-8">
