@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -95,6 +97,14 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <Link 
+                  to="/architect"
+                  className="text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200"
+                >
+                  THE ARCHITECT
+                </Link>
+              </li>
+              <li>
                 <a 
                   href="#faq" 
                   className="text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200"
@@ -146,7 +156,14 @@ const Footer: React.FC = () => {
               </li>
             </ul>
             
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col space-y-3">
+              <Link 
+                to="/architect"
+                className="neo-button text-sm px-4 py-2 rounded-full text-center"
+              >
+                Enter The Architect
+              </Link>
+              
               <a 
                 href="https://www.aiwebtools.ai"
                 target="_blank" 
