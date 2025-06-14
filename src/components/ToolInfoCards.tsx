@@ -16,7 +16,7 @@ const ToolInfoCards = () => {
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2 neo-glow">Neo-Matrix GPT</h3>
                 <p className="text-matrix-green/80 text-sm mb-4">
-                  Your guide through the simulated reality. Decode binary messages, explore philosophical depths, and follow the white rabbit to discover the truth about your existence.
+                  Your introduction to the Matrix, led by none other than Morpheus himself. Decode binary messages, explore philosophical depths, and follow the white rabbit as Morpheus guides you through the awakening process to discover the truth about your existence.
                 </p>
                 <a 
                   href="https://chatgpt.com/g/g-nhD44KqqU-matrix-neo-gpt" 
