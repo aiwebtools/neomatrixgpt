@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -139,7 +140,6 @@ const HeroSection: React.FC = () => {
         <div className="absolute w-12 h-12 rounded-full bg-blue-500 transform-3d animate-float" style={{ animationDelay: '1.2s' }}></div>
       </div>
       
-      {/* Binary Code Background Elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none select-none">
         <div className="absolute -left-4 top-1/4 font-mono text-xs md:text-sm whitespace-nowrap">
           01001110 01100101 01101111 00101101 01001101 01100001 01110100 01110010 01101001 01111000
