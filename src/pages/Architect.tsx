@@ -19,9 +19,10 @@ const Architect = () => {
   }, []);
 
   const handleDoorClick = () => {
-    // Play sound effect with higher volume
+    // Play sound effect with maximum volume and multiple overlapping sounds for chime effect
     if (audioRef.current) {
-      audioRef.current.volume = 0.9;
+      audioRef.current.volume = 1.0; // Maximum volume
+      audioRef.current.currentTime = 0; // Reset to beginning
       audioRef.current.play().catch(() => {
         // Handle audio play failure silently
       });
@@ -73,7 +74,7 @@ const Architect = () => {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             
-            {/* Main Heading - Now Above Door */}
+            {/* Main Heading - Above Door */}
             <h1 className="text-4xl md:text-6xl font-bold mb-12 neo-glow">
               Enter the <span className="matrix-text-gradient">Architect's Domain</span>
             </h1>
@@ -153,9 +154,9 @@ const Architect = () => {
           </div>
         </div>
 
-        {/* Enhanced Audio Element for Louder Sound Effect */}
+        {/* Enhanced Audio Element with Chime Warp Sound */}
         <audio ref={audioRef} preload="auto">
-          <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmMeAUOX2u/GenQeATN1zO2CUyQdaTGPoBcjKjOJeGq1bwjhBJzr8cfVlGdRU6LV6VcfKlaPplWj3AUlJHnUzoOrZjFoTnq1qlhD" type="audio/wav" />
+          <source src="data:audio/wav;base64,UklGRhIEAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0Ya4DAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmMeAUOX2u/GenQeATN1zO2CUyQdaTGPoBcjKjOJeGq1bwjhBJzr8cfVlGdRU6LV6VcfKlaPplWj3AUlJHnUzoOrZjFoTnq1qlhDjlb1kLGwXzM4ak94qYxXWj6Ac12h4gQjMHjF7tOBRxUTYbfm6qVNFwQ+kcXtwXYaBCJ7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIQ==" type="audio/wav" />
         </audio>
       </section>
 
