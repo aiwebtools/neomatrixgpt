@@ -7,7 +7,6 @@ import FallingCode from '../components/FallingCode';
 const Architect = () => {
   const [showDoor, setShowDoor] = useState(false);
   const [flashEffect, setFlashEffect] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     // Show door after page loads
@@ -19,14 +18,25 @@ const Architect = () => {
   }, []);
 
   const handleDoorClick = () => {
-    // Play sound effect with maximum volume and multiple overlapping sounds for chime effect
-    if (audioRef.current) {
-      audioRef.current.volume = 1.0; // Maximum volume
-      audioRef.current.currentTime = 0; // Reset to beginning
-      audioRef.current.play().catch(() => {
-        // Handle audio play failure silently
-      });
+    // Create robotic voice saying "WELCOME NEO, I HAVE BEEN WAITING FOR YOU"
+    const utterance = new SpeechSynthesisUtterance("WELCOME NEO, I HAVE BEEN WAITING FOR YOU");
+    utterance.volume = 1.0; // Maximum volume
+    utterance.rate = 0.6; // Slower rate for more robotic feel
+    utterance.pitch = 0.3; // Lower pitch for robotic voice
+    
+    // Try to find a more robotic sounding voice
+    const voices = speechSynthesis.getVoices();
+    const roboticVoice = voices.find(voice => 
+      voice.name.toLowerCase().includes('male') || 
+      voice.name.toLowerCase().includes('robot') ||
+      voice.name.toLowerCase().includes('microsoft')
+    ) || voices[0];
+    
+    if (roboticVoice) {
+      utterance.voice = roboticVoice;
     }
+
+    speechSynthesis.speak(utterance);
 
     // Trigger flash effect
     setFlashEffect(true);
@@ -153,11 +163,6 @@ const Architect = () => {
             </div>
           </div>
         </div>
-
-        {/* Enhanced Audio Element with Chime Warp Sound */}
-        <audio ref={audioRef} preload="auto">
-          <source src="data:audio/wav;base64,UklGRhIEAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0Ya4DAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmMeAUOX2u/GenQeATN1zO2CUyQdaTGPoBcjKjOJeGq1bwjhBJzr8cfVlGdRU6LV6VcfKlaPplWj3AUlJHnUzoOrZjFoTnq1qlhDjlb1kLGwXzM4ak94qYxXWj6Ac12h4gQjMHjF7tOBRxUTYbfm6qVNFwQ+kcXtwXYaBCJ7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIXvE7tGBSxgXZrTn6qRMFwQ9j8TtwnYYAyF7xO7RgUsYF2a05+qkTBcEPY/E7cJ2GAMhe8Tu0YFLGBdmtOfqpEwXBD2PxO3CdhgDIQ==" type="audio/wav" />
-        </audio>
       </section>
 
       {/* Footer */}
