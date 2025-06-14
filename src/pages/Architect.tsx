@@ -21,7 +21,7 @@ const Architect = () => {
   const handleDoorClick = () => {
     // Play sound effect with higher volume
     if (audioRef.current) {
-      audioRef.current.volume = 0.8;
+      audioRef.current.volume = 0.9;
       audioRef.current.play().catch(() => {
         // Handle audio play failure silently
       });
@@ -34,7 +34,7 @@ const Architect = () => {
     setTimeout(() => {
       window.open('https://chatgpt.com/g/g-684cfc510aa081918916422a2038315d-the-architect-our-quantum-reality', '_blank');
       setFlashEffect(false);
-    }, 1200);
+    }, 1500);
   };
 
   return (
@@ -42,21 +42,24 @@ const Architect = () => {
       {/* Matrix Code Animation Background */}
       <FallingCode />
       
-      {/* Portal-like Flash Effect */}
+      {/* Enhanced Portal Flash Effect */}
       {flashEffect && (
         <div className="fixed inset-0 z-50">
-          {/* Bright white flash */}
-          <div className="absolute inset-0 bg-white animate-pulse" style={{ animationDuration: '1.2s' }} />
-          {/* Portal rings effect */}
+          {/* Brighter white flash with longer duration */}
+          <div className="absolute inset-0 bg-white opacity-95 animate-pulse" style={{ animationDuration: '1.5s' }} />
+          {/* Enhanced portal rings effect */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-32 h-32 border-4 border-matrix-green rounded-full animate-ping opacity-75"></div>
-            <div className="absolute w-64 h-64 border-2 border-matrix-lightgreen rounded-full animate-ping opacity-50" style={{ animationDelay: '0.2s' }}></div>
-            <div className="absolute w-96 h-96 border border-white rounded-full animate-ping opacity-25" style={{ animationDelay: '0.4s' }}></div>
+            <div className="w-32 h-32 border-4 border-matrix-green rounded-full animate-ping opacity-90"></div>
+            <div className="absolute w-64 h-64 border-2 border-matrix-lightgreen rounded-full animate-ping opacity-70" style={{ animationDelay: '0.2s' }}></div>
+            <div className="absolute w-96 h-96 border border-white rounded-full animate-ping opacity-50" style={{ animationDelay: '0.4s' }}></div>
+            <div className="absolute w-[600px] h-[600px] border border-matrix-blue rounded-full animate-ping opacity-30" style={{ animationDelay: '0.6s' }}></div>
           </div>
-          {/* Matrix code spiral */}
-          <div className="absolute inset-0 flex items-center justify-center font-mono text-matrix-green text-xs opacity-80">
-            <div className="animate-spin">
-              01001000 01100101 01101100 01110000 01001101 01100101
+          {/* Enhanced Matrix code spiral */}
+          <div className="absolute inset-0 flex items-center justify-center font-mono text-matrix-green text-sm opacity-90">
+            <div className="animate-spin text-center">
+              <div>01001000 01100101 01101100 01110000 01001101 01100101</div>
+              <div className="mt-2">01000001 01010010 01000011 01001000 01001001 01010100</div>
+              <div className="mt-2">01000101 01000011 01010100 01010101 01010010 01000101</div>
             </div>
           </div>
         </div>
@@ -70,8 +73,13 @@ const Architect = () => {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             
+            {/* Main Heading - Now Above Door */}
+            <h1 className="text-4xl md:text-6xl font-bold mb-12 neo-glow">
+              Enter the <span className="matrix-text-gradient">Architect's Domain</span>
+            </h1>
+
             {/* Door Container - Made even bigger */}
-            <div className="relative flex justify-center items-center min-h-[600px] mb-8">
+            <div className="relative flex justify-center items-center min-h-[700px] mb-8">
               {showDoor && (
                 <div 
                   className="cursor-pointer transform transition-all duration-700 hover:scale-105 animate-fade-in"
@@ -79,7 +87,7 @@ const Architect = () => {
                 >
                   <div className="relative group">
                     {/* Door Image/SVG - Made much bigger */}
-                    <div className="w-96 h-[500px] bg-gradient-to-b from-matrix-green/20 to-matrix-green/5 border-2 border-matrix-green rounded-lg shadow-2xl shadow-matrix-green/50 relative overflow-hidden">
+                    <div className="w-[500px] h-[600px] bg-gradient-to-b from-matrix-green/20 to-matrix-green/5 border-2 border-matrix-green rounded-lg shadow-2xl shadow-matrix-green/50 relative overflow-hidden">
                       {/* Door Frame */}
                       <div className="absolute inset-2 border border-matrix-green/50 rounded">
                         {/* Door Panels */}
@@ -93,14 +101,14 @@ const Architect = () => {
                         </div>
                         
                         {/* Door Handle - Made bigger */}
-                        <div className="absolute right-10 top-1/2 transform -translate-y-1/2 w-5 h-12 bg-matrix-green rounded-full shadow-lg shadow-matrix-green/50"></div>
+                        <div className="absolute right-12 top-1/2 transform -translate-y-1/2 w-6 h-16 bg-matrix-green rounded-full shadow-lg shadow-matrix-green/50"></div>
                       </div>
                       
                       {/* Enhanced Glow Effect */}
                       <div className="absolute inset-0 bg-matrix-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                       
                       {/* Matrix Code Overlay - More codes */}
-                      <div className="absolute inset-0 opacity-20 font-mono text-base overflow-hidden">
+                      <div className="absolute inset-0 opacity-20 font-mono text-lg overflow-hidden">
                         <div className="absolute top-8 left-8">01000001</div>
                         <div className="absolute top-20 right-8">01010010</div>
                         <div className="absolute top-32 left-16">01000011</div>
@@ -109,6 +117,7 @@ const Architect = () => {
                         <div className="absolute bottom-8 right-8">01010100</div>
                         <div className="absolute bottom-32 left-16">01000101</div>
                         <div className="absolute bottom-44 right-16">01000011</div>
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">01000101</div>
                       </div>
                     </div>
                     
@@ -120,10 +129,6 @@ const Architect = () => {
                 </div>
               )}
             </div>
-
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 neo-glow">
-              Enter the <span className="matrix-text-gradient">Architect's Domain</span>
-            </h1>
             
             <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto">
               Beyond the Matrix lies the realm of The Architect. Here, quantum reality bends to will, 
