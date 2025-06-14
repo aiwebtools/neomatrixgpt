@@ -43,9 +43,7 @@ const ToolInfoCards = () => {
                   Meet the creator of the Matrix. Engage with the cold logic and mathematical precision of the system's designer. Understand the equations that govern reality.
                 </p>
                 <a 
-                  href="https://chatgpt.com/g/g-OjydyOs2O-the-architect" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  href="/architect" 
                   className="inline-flex items-center px-4 py-2 text-sm bg-matrix-darkgreen text-matrix-green border border-matrix-green rounded hover:bg-matrix-green hover:text-matrix-black transition-all duration-300"
                 >
                   <span className="mr-2">Meet the Architect</span>
