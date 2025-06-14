@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Brain, Cpu, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ToolInfoCards = () => {
   return (
@@ -42,13 +43,13 @@ const ToolInfoCards = () => {
                 <p className="text-matrix-green/80 text-sm mb-4">
                   The Architect discusses the nature of reality through the quantum lens for which we live. Explore the fundamental principles that shape our existence and understand the deeper mechanics of reality itself.
                 </p>
-                <a 
-                  href="/architect" 
+                <Link 
+                  to="/architect" 
                   className="inline-flex items-center px-4 py-2 text-sm bg-matrix-darkgreen text-matrix-green border border-matrix-green rounded hover:bg-matrix-green hover:text-matrix-black transition-all duration-300"
                 >
                   <span className="mr-2">Meet the Architect</span>
                   <ExternalLink size={16} />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
