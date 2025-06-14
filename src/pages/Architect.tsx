@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -9,6 +8,9 @@ const Architect = () => {
   const [flashEffect, setFlashEffect] = useState(false);
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    
     // Show door after page loads
     const timer = setTimeout(() => {
       setShowDoor(true);
