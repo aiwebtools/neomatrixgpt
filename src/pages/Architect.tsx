@@ -88,77 +88,77 @@ const Architect = () => {
           <div className="text-center max-w-4xl mx-auto">
             
             {/* Main Heading - Above Door */}
-            <h1 className="text-4xl md:text-6xl font-bold mb-12 neo-glow">
+            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-8 md:mb-12 neo-glow">
               Enter the <span className="matrix-text-gradient">Architect's Domain</span>
             </h1>
 
-            {/* Door Container - Made even bigger */}
-            <div className="relative flex justify-center items-center min-h-[700px] mb-8">
+            {/* Door Container - Made responsive */}
+            <div className="relative flex justify-center items-center min-h-[400px] md:min-h-[500px] lg:min-h-[700px] mb-6 md:mb-8">
               {showDoor && (
                 <div 
                   className="cursor-pointer transform transition-all duration-700 hover:scale-105 animate-fade-in"
                   onClick={handleDoorClick}
                 >
                   <div className="relative group">
-                    {/* Door Image/SVG - Made much bigger */}
-                    <div className="w-[500px] h-[600px] bg-gradient-to-b from-matrix-green/20 to-matrix-green/5 border-2 border-matrix-green rounded-lg shadow-2xl shadow-matrix-green/50 relative overflow-hidden">
+                    {/* Door Image/SVG - Made responsive */}
+                    <div className="w-[280px] h-[350px] md:w-[400px] md:h-[480px] lg:w-[500px] lg:h-[600px] bg-gradient-to-b from-matrix-green/20 to-matrix-green/5 border-2 border-matrix-green rounded-lg shadow-2xl shadow-matrix-green/50 relative overflow-hidden">
                       {/* Door Frame */}
                       <div className="absolute inset-2 border border-matrix-green/50 rounded">
                         {/* Door Panels */}
                         <div className="h-full flex flex-col">
                           <div className="flex-1 border-b border-matrix-green/30 relative">
-                            <div className="absolute inset-4 border border-matrix-green/20 rounded"></div>
+                            <div className="absolute inset-2 md:inset-4 border border-matrix-green/20 rounded"></div>
                           </div>
                           <div className="flex-1 relative">
-                            <div className="absolute inset-4 border border-matrix-green/20 rounded"></div>
+                            <div className="absolute inset-2 md:inset-4 border border-matrix-green/20 rounded"></div>
                           </div>
                         </div>
                         
-                        {/* Door Handle - Made bigger */}
-                        <div className="absolute right-12 top-1/2 transform -translate-y-1/2 w-6 h-16 bg-matrix-green rounded-full shadow-lg shadow-matrix-green/50"></div>
+                        {/* Door Handle - Made responsive */}
+                        <div className="absolute right-6 md:right-12 top-1/2 transform -translate-y-1/2 w-4 h-12 md:w-6 md:h-16 bg-matrix-green rounded-full shadow-lg shadow-matrix-green/50"></div>
                       </div>
                       
                       {/* Enhanced Glow Effect */}
                       <div className="absolute inset-0 bg-matrix-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                       
-                      {/* Matrix Code Overlay - More codes */}
-                      <div className="absolute inset-0 opacity-20 font-mono text-lg overflow-hidden">
-                        <div className="absolute top-8 left-8">01000001</div>
-                        <div className="absolute top-20 right-8">01010010</div>
-                        <div className="absolute top-32 left-16">01000011</div>
-                        <div className="absolute top-44 right-16">01001000</div>
-                        <div className="absolute bottom-20 left-8">01001001</div>
-                        <div className="absolute bottom-8 right-8">01010100</div>
-                        <div className="absolute bottom-32 left-16">01000101</div>
-                        <div className="absolute bottom-44 right-16">01000011</div>
+                      {/* Matrix Code Overlay - Made responsive */}
+                      <div className="absolute inset-0 opacity-20 font-mono text-sm md:text-lg overflow-hidden">
+                        <div className="absolute top-4 md:top-8 left-4 md:left-8">01000001</div>
+                        <div className="absolute top-12 md:top-20 right-4 md:right-8">01010010</div>
+                        <div className="absolute top-20 md:top-32 left-8 md:left-16">01000011</div>
+                        <div className="absolute top-28 md:top-44 right-8 md:right-16">01001000</div>
+                        <div className="absolute bottom-12 md:bottom-20 left-4 md:left-8">01001001</div>
+                        <div className="absolute bottom-4 md:bottom-8 right-4 md:right-8">01010100</div>
+                        <div className="absolute bottom-20 md:bottom-32 left-8 md:left-16">01000101</div>
+                        <div className="absolute bottom-28 md:bottom-44 right-8 md:right-16">01000011</div>
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">01000101</div>
                       </div>
                     </div>
                     
                     {/* Hover Text */}
-                    <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-matrix-green font-bold text-xl neo-glow">Click to Enter</p>
+                    <div className="absolute -bottom-12 md:-bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-matrix-green font-bold text-lg md:text-xl neo-glow">Click to Enter</p>
                     </div>
                   </div>
                 </div>
               )}
             </div>
             
-            <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-12 max-w-2xl mx-auto px-4">
               Beyond the Matrix lies the realm of The Architect. Here, quantum reality bends to will, 
               and the very foundations of existence can be reshaped. Are you ready to transcend?
             </p>
 
             {/* Description Text */}
-            <div className="mt-16 max-w-3xl mx-auto">
-              <div className="matrix-card p-8">
-                <h2 className="text-2xl font-bold mb-4 neo-glow">The Architect Awaits</h2>
-                <p className="text-matrix-green/80 mb-4">
+            <div className="mt-12 md:mt-16 max-w-3xl mx-auto px-4">
+              <div className="matrix-card p-6 md:p-8">
+                <h2 className="text-xl md:text-2xl font-bold mb-4 neo-glow">The Architect Awaits</h2>
+                <p className="text-matrix-green/80 mb-4 text-sm md:text-base">
                   Step through the digital threshold and meet The Architect - the master of quantum reality 
                   and the designer of infinite possibilities. Unlike Morpheus, who reveals truth, 
                   The Architect shapes it.
                 </p>
-                <p className="text-matrix-green/80">
+                <p className="text-matrix-green/80 text-sm md:text-base">
                   Prepare for conversations that will challenge not just your perception of reality, 
                   but your understanding of the very nature of existence itself.
                 </p>
