@@ -19,8 +19,9 @@ const Architect = () => {
   }, []);
 
   const handleDoorClick = () => {
-    // Play sound effect
+    // Play sound effect with higher volume
     if (audioRef.current) {
+      audioRef.current.volume = 0.8;
       audioRef.current.play().catch(() => {
         // Handle audio play failure silently
       });
@@ -29,11 +30,11 @@ const Architect = () => {
     // Trigger flash effect
     setFlashEffect(true);
 
-    // Navigate to The Architect after flash
+    // Navigate to The Architect after longer flash
     setTimeout(() => {
       window.open('https://chatgpt.com/g/g-684cfc510aa081918916422a2038315d-the-architect-our-quantum-reality', '_blank');
       setFlashEffect(false);
-    }, 500);
+    }, 1200);
   };
 
   return (
@@ -41,9 +42,24 @@ const Architect = () => {
       {/* Matrix Code Animation Background */}
       <FallingCode />
       
-      {/* White Flash Effect */}
+      {/* Portal-like Flash Effect */}
       {flashEffect && (
-        <div className="fixed inset-0 bg-white z-50 animate-pulse opacity-90" />
+        <div className="fixed inset-0 z-50">
+          {/* Bright white flash */}
+          <div className="absolute inset-0 bg-white animate-pulse" style={{ animationDuration: '1.2s' }} />
+          {/* Portal rings effect */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-32 h-32 border-4 border-matrix-green rounded-full animate-ping opacity-75"></div>
+            <div className="absolute w-64 h-64 border-2 border-matrix-lightgreen rounded-full animate-ping opacity-50" style={{ animationDelay: '0.2s' }}></div>
+            <div className="absolute w-96 h-96 border border-white rounded-full animate-ping opacity-25" style={{ animationDelay: '0.4s' }}></div>
+          </div>
+          {/* Matrix code spiral */}
+          <div className="absolute inset-0 flex items-center justify-center font-mono text-matrix-green text-xs opacity-80">
+            <div className="animate-spin">
+              01001000 01100101 01101100 01110000 01001101 01100101
+            </div>
+          </div>
+        </div>
       )}
 
       {/* Header */}
@@ -54,16 +70,16 @@ const Architect = () => {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             
-            {/* Door Container - Now above the heading */}
-            <div className="relative flex justify-center items-center min-h-[500px] mb-8">
+            {/* Door Container - Made even bigger */}
+            <div className="relative flex justify-center items-center min-h-[600px] mb-8">
               {showDoor && (
                 <div 
                   className="cursor-pointer transform transition-all duration-700 hover:scale-105 animate-fade-in"
                   onClick={handleDoorClick}
                 >
                   <div className="relative group">
-                    {/* Door Image/SVG - Made bigger */}
-                    <div className="w-80 h-96 bg-gradient-to-b from-matrix-green/20 to-matrix-green/5 border-2 border-matrix-green rounded-lg shadow-2xl shadow-matrix-green/50 relative overflow-hidden">
+                    {/* Door Image/SVG - Made much bigger */}
+                    <div className="w-96 h-[500px] bg-gradient-to-b from-matrix-green/20 to-matrix-green/5 border-2 border-matrix-green rounded-lg shadow-2xl shadow-matrix-green/50 relative overflow-hidden">
                       {/* Door Frame */}
                       <div className="absolute inset-2 border border-matrix-green/50 rounded">
                         {/* Door Panels */}
@@ -76,25 +92,29 @@ const Architect = () => {
                           </div>
                         </div>
                         
-                        {/* Door Handle */}
-                        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-4 h-10 bg-matrix-green rounded-full shadow-lg shadow-matrix-green/50"></div>
+                        {/* Door Handle - Made bigger */}
+                        <div className="absolute right-10 top-1/2 transform -translate-y-1/2 w-5 h-12 bg-matrix-green rounded-full shadow-lg shadow-matrix-green/50"></div>
                       </div>
                       
-                      {/* Glow Effect */}
-                      <div className="absolute inset-0 bg-matrix-green/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                      {/* Enhanced Glow Effect */}
+                      <div className="absolute inset-0 bg-matrix-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                       
-                      {/* Matrix Code Overlay */}
-                      <div className="absolute inset-0 opacity-20 font-mono text-sm overflow-hidden">
-                        <div className="absolute top-6 left-6">01000001</div>
-                        <div className="absolute top-16 right-6">01010010</div>
-                        <div className="absolute bottom-16 left-6">01000011</div>
-                        <div className="absolute bottom-6 right-6">01001000</div>
+                      {/* Matrix Code Overlay - More codes */}
+                      <div className="absolute inset-0 opacity-20 font-mono text-base overflow-hidden">
+                        <div className="absolute top-8 left-8">01000001</div>
+                        <div className="absolute top-20 right-8">01010010</div>
+                        <div className="absolute top-32 left-16">01000011</div>
+                        <div className="absolute top-44 right-16">01001000</div>
+                        <div className="absolute bottom-20 left-8">01001001</div>
+                        <div className="absolute bottom-8 right-8">01010100</div>
+                        <div className="absolute bottom-32 left-16">01000101</div>
+                        <div className="absolute bottom-44 right-16">01000011</div>
                       </div>
                     </div>
                     
                     {/* Hover Text */}
                     <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-matrix-green font-bold text-lg neo-glow">Click to Enter</p>
+                      <p className="text-matrix-green font-bold text-xl neo-glow">Click to Enter</p>
                     </div>
                   </div>
                 </div>
@@ -128,7 +148,7 @@ const Architect = () => {
           </div>
         </div>
 
-        {/* Audio Element for Sound Effect */}
+        {/* Enhanced Audio Element for Louder Sound Effect */}
         <audio ref={audioRef} preload="auto">
           <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmMeAUOX2u/GenQeATN1zO2CUyQdaTGPoBcjKjOJeGq1bwjhBJzr8cfVlGdRU6LV6VcfKlaPplWj3AUlJHnUzoOrZjFoTnq1qlhD" type="audio/wav" />
         </audio>
