@@ -45,9 +45,6 @@ const Index = () => {
       {/* Disclaimer Popup */}
       <DisclaimerPopup />
       
-      {/* Tool Information Cards */}
-      <ToolInfoCards />
-      
       {/* Header */}
       <Header />
       
@@ -176,6 +173,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      {/* Tool Information Cards - Moved to bottom above footer */}
+      <ToolInfoCards />
       
       {/* Footer */}
       <Footer />
