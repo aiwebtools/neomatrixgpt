@@ -1,8 +1,17 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const FooterNavigation: React.FC = () => {
+  const location = useLocation();
+
+  const handleArchitectClick = (e: React.MouseEvent) => {
+    if (location.pathname === '/architect') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
       <h3 className="font-bold text-lg mb-4">Navigation</h3>
@@ -20,6 +29,7 @@ const FooterNavigation: React.FC = () => {
         <li>
           <Link 
             to="/architect"
+            onClick={handleArchitectClick}
             className="text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200"
           >
             Meet The Architect
