@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,10 +70,8 @@ const Header: React.FC = () => {
             >
               <span>MATRIX NEO GPT</span>
             </a>
-            <a 
-              href="https://chatgpt.com/g/g-nhD44KqqU-matrix-neo-gpt"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/architect"
               className="flex items-center space-x-2 text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200"
             >
               <span>FOLLOW THE WHITE RABBIT</span>
@@ -83,11 +81,17 @@ const Header: React.FC = () => {
                 <path d="M14.5 21.9999C14.5 21.9999 14.5 21.9999 14.5 21.9999C14.5 20.0669 12.5 14.5 12.5 14.5C12.5 14.5 10.5 20.0669 10.5 21.9999H14.5Z" fill="#ffffff"/>
                 <path d="M15 11C15 12.1046 14.1046 13 13 13H12H11C9.89543 13 9 12.1046 9 11V10C9 9.44772 9.44772 9 10 9H14C14.5523 9 15 9.44772 15 10V11Z" fill="#ffffff"/>
               </svg>
-            </a>
-            <a href="#faq" className="text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200">
+            </Link>
+            <a 
+              href="#faq" 
+              className="text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200"
+            >
               FAQ
             </a>
-            <a href="#disclaimer" className="text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200">
+            <a 
+              href="#disclaimer" 
+              className="text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200"
+            >
               DISCLAIMER
             </a>
             <a 
@@ -126,10 +130,8 @@ const Header: React.FC = () => {
           >
             MATRIX NEO GPT
           </a>
-          <a 
-            href="https://chatgpt.com/g/g-nhD44KqqU-matrix-neo-gpt"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link 
+            to="/architect"
             className="flex items-center space-x-2 py-2 text-matrix-green hover:text-matrix-lightgreen transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
@@ -140,7 +142,7 @@ const Header: React.FC = () => {
               <path d="M14.5 21.9999C14.5 21.9999 14.5 21.9999 14.5 21.9999C14.5 20.0669 12.5 14.5 12.5 14.5C12.5 14.5 10.5 20.0669 10.5 21.9999H14.5Z" fill="#ffffff"/>
               <path d="M15 11C15 12.1046 14.1046 13 13 13H12H11C9.89543 13 9 12.1046 9 11V10C9 9.44772 9.44772 9 10 9H14C14.5523 9 15 9.44772 15 10V11Z" fill="#ffffff"/>
             </svg>
-          </a>
+          </Link>
           <a 
             href="#faq" 
             className="block text-matrix-green hover:text-matrix-lightgreen py-2 transition-colors"
