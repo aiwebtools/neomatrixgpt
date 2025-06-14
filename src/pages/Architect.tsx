@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -45,7 +46,7 @@ const Architect = () => {
 
     // Navigate to The Architect after longer flash
     setTimeout(() => {
-      window.open('https://chatgpt.com/g/g-684cfc510aa081918916422a2038315d-the-architect-our-quantum-reality', '_blank');
+      window.open('https://chatgpt.com/g/g-684cfc510aa081918916422a2038315d-the-architect-our-quantum-reality', '_blank', 'noopener,noreferrer');
       setFlashEffect(false);
     }, 1500);
   };
