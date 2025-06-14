@@ -40,7 +40,7 @@ const ToolInfoCards = () => {
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2 neo-glow">The Architect GPT</h3>
                 <p className="text-matrix-green/80 text-sm mb-4">
-                  Meet the creator of the Matrix. Engage with the cold logic and mathematical precision of the system's designer. Understand the equations that govern reality.
+                  The Architect discusses the nature of reality through the quantum lens for which we live. Engage with the cold logic and mathematical precision of the system's designer to understand the equations that govern existence.
                 </p>
                 <a 
                   href="/architect" 
