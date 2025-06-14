@@ -1,5 +1,5 @@
-
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -68,32 +68,34 @@ const HeroSection: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
             <div className="perspective">
-              <div className="matrix-card transform transition-all duration-500 hover:scale-105 hover:-rotate-1 h-full flex flex-col justify-between">
-                <div className="flex-1">
-                  <div className="h-16 w-16 mx-auto mb-4">
-                    <svg viewBox="0 0 24 24" className="w-full h-full">
-                      <path 
-                        d="M12 5C12 6.65685 10.6569 8 9 8C7.34315 8 6 6.65685 6 5C6 3.34315 7.34315 2 9 2C10.6569 2 12 3.34315 12 5Z" 
-                        fill="#00FF41"
-                      />
-                      <path 
-                        d="M15 8C16.6569 8 18 6.65685 18 5C18 3.34315 16.6569 2 15 2C13.3431 2 12 3.34315 12 5C12 6.65685 13.3431 8 15 8Z" 
-                        fill="#00FF41"
-                      />
-                      <path 
-                        d="M14.5 21.9999C14.5 21.9999 14.5 21.9999 14.5 21.9999C14.5 20.0669 12.5 14.5 12.5 14.5C12.5 14.5 10.5 20.0669 10.5 21.9999H14.5Z" 
-                        fill="#00FF41"
-                      />
-                      <path 
-                        d="M15 11C15 12.1046 14.1046 13 13 13H12H11C9.89543 13 9 12.1046 9 11V10C9 9.44772 9.44772 9 10 9H14C14.5523 9 15 9.44772 15 10V11Z" 
-                        fill="#00FF41"
-                      />
-                    </svg>
+              <Link to="/architect" className="block h-full">
+                <div className="matrix-card transform transition-all duration-500 hover:scale-105 hover:-rotate-1 h-full flex flex-col justify-between cursor-pointer">
+                  <div className="flex-1">
+                    <div className="h-16 w-16 mx-auto mb-4">
+                      <svg viewBox="0 0 24 24" className="w-full h-full">
+                        <path 
+                          d="M12 5C12 6.65685 10.6569 8 9 8C7.34315 8 6 6.65685 6 5C6 3.34315 7.34315 2 9 2C10.6569 2 12 3.34315 12 5Z" 
+                          fill="#00FF41"
+                        />
+                        <path 
+                          d="M15 8C16.6569 8 18 6.65685 18 5C18 3.34315 16.6569 2 15 2C13.3431 2 12 3.34315 12 5C12 6.65685 13.3431 8 15 8Z" 
+                          fill="#00FF41"
+                        />
+                        <path 
+                          d="M14.5 21.9999C14.5 21.9999 14.5 21.9999 14.5 21.9999C14.5 20.0669 12.5 14.5 12.5 14.5C12.5 14.5 10.5 20.0669 10.5 21.9999H14.5Z" 
+                          fill="#00FF41"
+                        />
+                        <path 
+                          d="M15 11C15 12.1046 14.1046 13 13 13H12H11C9.89543 13 9 12.1046 9 11V10C9 9.44772 9.44772 9 10 9H14C14.5523 9 15 9.44772 15 10V11Z" 
+                          fill="#00FF41"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3">Follow the White Rabbit</h3>
+                    <p className="text-matrix-green/80">Begin your journey of revelation and uncover the hidden truths of your simulated reality.</p>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Follow the White Rabbit</h3>
-                  <p className="text-matrix-green/80">Begin your journey of revelation and uncover the hidden truths of your simulated reality.</p>
                 </div>
-              </div>
+              </Link>
             </div>
             
             <div className="perspective">
