@@ -53,25 +53,17 @@ const Architect = () => {
       <section className="relative min-h-screen flex items-center justify-center pt-16">
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 neo-glow">
-              Enter the <span className="matrix-text-gradient">Architect's Domain</span>
-            </h1>
             
-            <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-              Beyond the Matrix lies the realm of The Architect. Here, quantum reality bends to will, 
-              and the very foundations of existence can be reshaped. Are you ready to transcend?
-            </p>
-
-            {/* Door Container */}
-            <div className="relative flex justify-center items-center min-h-[400px]">
+            {/* Door Container - Now above the heading */}
+            <div className="relative flex justify-center items-center min-h-[500px] mb-8">
               {showDoor && (
                 <div 
                   className="cursor-pointer transform transition-all duration-700 hover:scale-105 animate-fade-in"
                   onClick={handleDoorClick}
                 >
                   <div className="relative group">
-                    {/* Door Image/SVG */}
-                    <div className="w-64 h-80 bg-gradient-to-b from-matrix-green/20 to-matrix-green/5 border-2 border-matrix-green rounded-lg shadow-2xl shadow-matrix-green/50 relative overflow-hidden">
+                    {/* Door Image/SVG - Made bigger */}
+                    <div className="w-80 h-96 bg-gradient-to-b from-matrix-green/20 to-matrix-green/5 border-2 border-matrix-green rounded-lg shadow-2xl shadow-matrix-green/50 relative overflow-hidden">
                       {/* Door Frame */}
                       <div className="absolute inset-2 border border-matrix-green/50 rounded">
                         {/* Door Panels */}
@@ -85,18 +77,18 @@ const Architect = () => {
                         </div>
                         
                         {/* Door Handle */}
-                        <div className="absolute right-6 top-1/2 transform -translate-y-1/2 w-3 h-8 bg-matrix-green rounded-full shadow-lg shadow-matrix-green/50"></div>
+                        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-4 h-10 bg-matrix-green rounded-full shadow-lg shadow-matrix-green/50"></div>
                       </div>
                       
                       {/* Glow Effect */}
                       <div className="absolute inset-0 bg-matrix-green/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                       
                       {/* Matrix Code Overlay */}
-                      <div className="absolute inset-0 opacity-20 font-mono text-xs overflow-hidden">
-                        <div className="absolute top-4 left-4">01000001</div>
-                        <div className="absolute top-12 right-4">01010010</div>
-                        <div className="absolute bottom-12 left-4">01000011</div>
-                        <div className="absolute bottom-4 right-4">01001000</div>
+                      <div className="absolute inset-0 opacity-20 font-mono text-sm overflow-hidden">
+                        <div className="absolute top-6 left-6">01000001</div>
+                        <div className="absolute top-16 right-6">01010010</div>
+                        <div className="absolute bottom-16 left-6">01000011</div>
+                        <div className="absolute bottom-6 right-6">01001000</div>
                       </div>
                     </div>
                     
@@ -108,6 +100,15 @@ const Architect = () => {
                 </div>
               )}
             </div>
+
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 neo-glow">
+              Enter the <span className="matrix-text-gradient">Architect's Domain</span>
+            </h1>
+            
+            <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+              Beyond the Matrix lies the realm of The Architect. Here, quantum reality bends to will, 
+              and the very foundations of existence can be reshaped. Are you ready to transcend?
+            </p>
 
             {/* Description Text */}
             <div className="mt-16 max-w-3xl mx-auto">
