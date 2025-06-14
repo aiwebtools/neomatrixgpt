@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -9,6 +10,7 @@ import FaqSection from '../components/FaqSection';
 import DisclaimerSection from '../components/DisclaimerSection';
 import FallingCode from '../components/FallingCode';
 import DisclaimerPopup from '../components/DisclaimerPopup';
+import ToolInfoCards from '../components/ToolInfoCards';
 import { Code, Brain, Rabbit, Upload, MessageSquare, Key } from 'lucide-react';
 
 const Index = () => {
@@ -42,6 +44,9 @@ const Index = () => {
       
       {/* Disclaimer Popup */}
       <DisclaimerPopup />
+      
+      {/* Tool Information Cards */}
+      <ToolInfoCards />
       
       {/* Header */}
       <Header />
