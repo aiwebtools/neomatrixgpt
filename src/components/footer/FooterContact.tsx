@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const FooterContact: React.FC = () => {
   return (
@@ -28,14 +27,7 @@ const FooterContact: React.FC = () => {
         </li>
       </ul>
       
-      <div className="mt-8 flex flex-col space-y-3">
-        <Link 
-          to="/architect"
-          className="neo-button text-sm px-4 py-2 rounded-full text-center"
-        >
-          Meet The Architect
-        </Link>
-        
+      <div className="mt-8">
         <a 
           href="https://www.aiwebtools.ai"
           target="_blank" 
