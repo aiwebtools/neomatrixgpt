@@ -22,7 +22,7 @@ const FooterNavigation: React.FC = () => {
             to="/architect"
             className="text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200"
           >
-            THE ARCHITECT
+            Meet The Architect
           </Link>
         </li>
         <li>
