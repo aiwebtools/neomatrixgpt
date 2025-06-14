@@ -161,7 +161,7 @@ const Footer: React.FC = () => {
                 to="/architect"
                 className="neo-button text-sm px-4 py-2 rounded-full text-center"
               >
-                Enter The Architect
+                Meet The Architect
               </Link>
               
               <a 
