@@ -11,6 +11,7 @@ import DisclaimerSection from '../components/DisclaimerSection';
 import FallingCode from '../components/FallingCode';
 import DisclaimerPopup from '../components/DisclaimerPopup';
 import ToolInfoCards from '../components/ToolInfoCards';
+import TalkToSection from '../components/TalkToSection';
 import { Code, Brain, Rabbit, Upload, MessageSquare, Key } from 'lucide-react';
 
 const Index = () => {
@@ -50,6 +51,9 @@ const Index = () => {
       
       {/* Hero Section */}
       <HeroSection />
+      
+      {/* Talk to Section - Added after Hero */}
+      <TalkToSection />
       
       {/* Feature Section */}
       <section className="py-20 relative">

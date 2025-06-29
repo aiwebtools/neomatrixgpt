@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -121,6 +122,22 @@ const Header: React.FC = () => {
         }`}
       >
         <div className="container mx-auto px-4 py-4 space-y-4">
+          <a 
+            href="https://chatgpt.com/g/g-nhD44KqqU-matrix-neo-gpt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-matrix-green hover:text-matrix-lightgreen py-2 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Talk to Morpheus
+          </a>
+          <Link 
+            to="/architect"
+            className="flex items-center space-x-2 py-2 text-matrix-green hover:text-matrix-lightgreen transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <span>Talk to the Architect</span>
+          </Link>
           <a 
             href="https://chatgpt.com/g/g-nhD44KqqU-matrix-neo-gpt"
             target="_blank"
