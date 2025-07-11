@@ -20,7 +20,12 @@ const Architect = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleDoorClick = () => {
+  const handleDoorClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    console.log('Door clicked!'); // Debug log
+    
     // Create robotic voice saying "WELCOME NEO, I HAVE BEEN WAITING FOR YOU"
     const utterance = new SpeechSynthesisUtterance("WELCOME NEO, I HAVE BEEN WAITING FOR YOU");
     utterance.volume = 1.0; // Maximum volume
@@ -46,6 +51,7 @@ const Architect = () => {
 
     // Navigate to The Architect after longer flash
     setTimeout(() => {
+      console.log('Opening Architect URL'); // Debug log
       window.open('https://chatgpt.com/g/g-684cfc510aa081918916422a2038315d-the-architect-our-quantum-reality', '_blank', 'noopener,noreferrer');
       setFlashEffect(false);
     }, 1500);
@@ -96,12 +102,14 @@ const Architect = () => {
             <div className="relative flex justify-center items-center min-h-[400px] md:min-h-[500px] lg:min-h-[700px] mb-6 md:mb-8">
               {showDoor && (
                 <div 
-                  className="cursor-pointer transform transition-all duration-700 hover:scale-105 animate-fade-in touch-manipulation"
+                  className="cursor-pointer transform transition-all duration-700 hover:scale-105 animate-fade-in touch-manipulation select-none"
                   onClick={handleDoorClick}
+                  onTouchStart={handleDoorClick}
                   onTouchEnd={handleDoorClick}
                   role="button"
                   tabIndex={0}
                   aria-label="Click to enter The Architect's domain"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                 >
                   <div className="relative group">
                     {/* Door Image/SVG - Made responsive */}
