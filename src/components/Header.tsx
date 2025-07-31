@@ -122,31 +122,6 @@ const Header: React.FC = () => {
         }`}
       >
         <div className="container mx-auto px-4 py-4 space-y-4">
-          <a 
-            href="https://chatgpt.com/g/g-nhD44KqqU-matrix-neo-gpt"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-matrix-green hover:text-matrix-lightgreen py-2 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Talk to Morpheus
-          </a>
-          <Link 
-            to="/architect"
-            className="flex items-center space-x-2 py-2 text-matrix-green hover:text-matrix-lightgreen transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <span>Talk to the Architect</span>
-          </Link>
-          <a 
-            href="https://chatgpt.com/g/g-nhD44KqqU-matrix-neo-gpt"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-matrix-green hover:text-matrix-lightgreen py-2 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            MATRIX NEO GPT
-          </a>
           <Link 
             to="/architect"
             className="flex items-center space-x-2 py-2 text-matrix-green hover:text-matrix-lightgreen transition-colors"
@@ -160,6 +135,15 @@ const Header: React.FC = () => {
               <path d="M15 11C15 12.1046 14.1046 13 13 13H12H11C9.89543 13 9 12.1046 9 11V10C9 9.44772 9.44772 9 10 9H14C14.5523 9 15 9.44772 15 10V11Z" fill="#ffffff"/>
             </svg>
           </Link>
+          <a 
+            href="https://chatgpt.com/g/g-nhD44KqqU-matrix-neo-gpt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-matrix-green hover:text-matrix-lightgreen py-2 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            MATRIX NEO GPT
+          </a>
           <a 
             href="#faq" 
             className="block text-matrix-green hover:text-matrix-lightgreen py-2 transition-colors"
