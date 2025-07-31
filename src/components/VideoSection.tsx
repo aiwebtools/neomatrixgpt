@@ -64,12 +64,10 @@ const VideoSection: React.FC = () => {
         {/* BECOME IMMORTALIZED Button */}
         <div className="flex justify-center mt-12 mb-6 animate-pulse-glow">
           <a 
-            href="https://immortalizeme.lovable.app/?via=aiwebtools" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="/architect" 
             className="neo-button group tracking-wider text-lg border-2 border-matrix-green bg-matrix-black py-3 px-8 hover:bg-matrix-green hover:text-matrix-black transition-all duration-300 shadow-lg shadow-matrix-green/30"
           >
-            <span className="font-mono mr-2 font-bold">BECOME IMMORTALIZED</span>
+            <span className="font-mono mr-2 font-bold">OPEN THE DOOR</span>
             <svg 
               className="w-5 h-5 inline-block transition-transform group-hover:translate-x-1" 
               fill="none" 
