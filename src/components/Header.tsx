@@ -75,7 +75,7 @@ const Header: React.FC = () => {
               to="/architect"
               className="flex items-center space-x-2 text-matrix-green hover:text-matrix-lightgreen transition-colors duration-200"
             >
-              <span>THE ARCHITECT</span>
+              <span>FOLLOW THE WHITE RABBIT</span>
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
                 <path d="M12 5C12 6.65685 10.6569 8 9 8C7.34315 8 6 6.65685 6 5C6 3.34315 7.34315 2 9 2C10.6569 2 12 3.34315 12 5Z" fill="#ffffff"/>
                 <path d="M15 8C16.6569 8 18 6.65685 18 5C18 3.34315 16.6569 2 15 2C13.3431 2 12 3.34315 12 5C12 6.65685 13.3431 8 15 8Z" fill="#ffffff"/>
@@ -127,7 +127,7 @@ const Header: React.FC = () => {
             className="flex items-center space-x-2 py-2 text-matrix-green hover:text-matrix-lightgreen transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            <span>THE ARCHITECT</span>
+            <span>FOLLOW THE WHITE RABBIT</span>
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
               <path d="M12 5C12 6.65685 10.6569 8 9 8C7.34315 8 6 6.65685 6 5C6 3.34315 7.34315 2 9 2C10.6569 2 12 3.34315 12 5Z" fill="#ffffff"/>
               <path d="M15 8C16.6569 8 18 6.65685 18 5C18 3.34315 16.6569 2 15 2C13.3431 2 12 3.34315 12 5C12 6.65685 13.3431 8 15 8Z" fill="#ffffff"/>

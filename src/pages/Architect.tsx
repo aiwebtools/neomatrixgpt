@@ -104,15 +104,17 @@ const Architect = () => {
                 <div 
                   className="cursor-pointer transform transition-all duration-700 hover:scale-105 animate-fade-in touch-manipulation select-none active:scale-95"
                   onClick={handleDoorClick}
-                  onTouchStart={(e) => e.stopPropagation()}
+                  onPointerDown={(e) => {
+                    e.preventDefault();
+                    handleDoorClick(e);
+                  }}
                   role="button"
                   tabIndex={0}
                   aria-label="Click to enter The Architect's domain"
                   style={{ 
                     WebkitTapHighlightColor: 'transparent',
                     WebkitUserSelect: 'none',
-                    userSelect: 'none',
-                    touchAction: 'manipulation'
+                    userSelect: 'none'
                   }}
                 >
                   <div className="relative group">
