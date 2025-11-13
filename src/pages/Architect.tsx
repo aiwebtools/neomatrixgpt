@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FallingCode from '../components/FallingCode';
+import architectVoice from '../assets/architect-voice.mp3';
 
 const Architect = () => {
   const [showDoor, setShowDoor] = useState(false);
@@ -26,25 +27,10 @@ const Architect = () => {
     
     console.log('Door clicked!'); // Debug log
     
-    // Create robotic voice saying "WELCOME NEO, I HAVE BEEN WAITING FOR YOU"
-    const utterance = new SpeechSynthesisUtterance("WELCOME NEO, I HAVE BEEN WAITING FOR YOU");
-    utterance.volume = 1.0; // Maximum volume
-    utterance.rate = 0.6; // Slower rate for more robotic feel
-    utterance.pitch = 0.3; // Lower pitch for robotic voice
-    
-    // Try to find a more robotic sounding voice
-    const voices = speechSynthesis.getVoices();
-    const roboticVoice = voices.find(voice => 
-      voice.name.toLowerCase().includes('male') || 
-      voice.name.toLowerCase().includes('robot') ||
-      voice.name.toLowerCase().includes('microsoft')
-    ) || voices[0];
-    
-    if (roboticVoice) {
-      utterance.voice = roboticVoice;
-    }
-
-    speechSynthesis.speak(utterance);
+    // Play the custom voice clip
+    const audio = new Audio(architectVoice);
+    audio.volume = 1.0;
+    audio.play().catch(err => console.log('Audio play failed:', err));
 
     // Trigger flash effect
     setFlashEffect(true);
@@ -104,7 +90,8 @@ const Architect = () => {
                 <div 
                   className="cursor-pointer transform transition-all duration-700 hover:scale-105 animate-fade-in touch-manipulation select-none active:scale-95"
                   onClick={handleDoorClick}
-                  onTouchStart={(e) => e.stopPropagation()}
+                  onTouchEnd={handleDoorClick}
+                  onTouchStart={(e) => e.preventDefault()}
                   role="button"
                   tabIndex={0}
                   aria-label="Click to enter The Architect's domain"
