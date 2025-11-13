@@ -68,12 +68,23 @@ const DisclaimerPopup = () => {
                 <h2 className="text-2xl font-bold neo-glow font-matrix tracking-wider uppercase">Enter The Matrix</h2>
                 
                 <div className="text-center space-y-3">
+                  <div className="p-3 border border-matrix-green/40 rounded bg-matrix-green/10 mb-4">
+                    <p className="text-matrix-green font-semibold text-sm">
+                      ⚠️ SIMULATION NOTICE ⚠️
+                    </p>
+                  </div>
+                  
                   <p className="text-matrix-green/90 font-light font-cyber leading-relaxed">
-                    This experience simulates the world of the Matrix film. It's a creative interpretation 
-                    and not affiliated with Warner Bros. or the official Matrix franchise.
+                    This is a <strong>simulated AI experience</strong> for entertainment and personal exploration only. 
+                    AI responses may be inaccurate and should not be considered factual or professional advice.
                   </p>
+                  
+                  <p className="text-matrix-green/90 font-light font-cyber leading-relaxed">
+                    This is a creative interpretation and not affiliated with Warner Bros. or the official Matrix franchise.
+                  </p>
+                  
                   <p className="text-matrix-green/90 font-light font-cyber leading-relaxed mt-2">
-                    Are you ready to see how deep the rabbit hole goes?
+                    By continuing, you acknowledge this is purely for entertainment purposes.
                   </p>
                 </div>
                 
