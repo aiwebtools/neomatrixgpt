@@ -55,6 +55,9 @@ const Index = () => {
       {/* Talk to Section - Added after Hero */}
       <TalkToSection />
       
+      {/* Video Section */}
+      <VideoSection />
+      
       {/* Feature Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
@@ -110,9 +113,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
-      {/* Video Section - Moved below the Feature section */}
-      <VideoSection />
       
       {/* Testimonial Section */}
       <section className="py-20 relative">
