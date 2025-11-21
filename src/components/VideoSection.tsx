@@ -1,10 +1,47 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const VideoSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [currentVideoId, setCurrentVideoId] = useState('SYf8ULSsVrI'); // First video
+  const playerRef = useRef<any>(null);
   
   useEffect(() => {
+    // Load YouTube iframe API
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+
+    // Initialize player when API is ready
+    (window as any).onYouTubeIframeAPIReady = () => {
+      playerRef.current = new (window as any).YT.Player('youtube-player', {
+        videoId: 'SYf8ULSsVrI',
+        playerVars: {
+          autoplay: 1,
+          mute: 0,
+          controls: 1,
+          rel: 0,
+          showinfo: 0,
+          modestbranding: 1,
+          start: 300, // Start at 5 minutes
+          vq: 'hd1080'
+        },
+        events: {
+          onStateChange: (event: any) => {
+            // When first video ends, load second video
+            if (event.data === (window as any).YT.PlayerState.ENDED && currentVideoId === 'SYf8ULSsVrI') {
+              setCurrentVideoId('qMLF5L_h2xo');
+              playerRef.current.loadVideoById({
+                videoId: 'qMLF5L_h2xo',
+                startSeconds: 0
+              });
+            }
+          }
+        }
+      });
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -42,16 +79,10 @@ const VideoSection: React.FC = () => {
           <div className="relative matrix-card overflow-hidden aspect-video transform transition-all duration-500 hover:scale-[1.02]">
             <div className="absolute inset-0 bg-matrix-green/10 backdrop-blur-sm z-0 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
             
-            <iframe 
-              width="100%" 
-              height="100%" 
-              src="https://www.youtube.com/embed/qMLF5L_h2xo?autoplay=1&mute=0&controls=1&rel=0&showinfo=0&modestbranding=1&vq=hd1080" 
-              title="The Matrix Simulation Theory"
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
+            <div 
+              id="youtube-player"
               className="absolute inset-0 w-full h-full z-10"
-            ></iframe>
+            ></div>
             
             {/* Decorative corners */}
             <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-matrix-green z-20"></div>
