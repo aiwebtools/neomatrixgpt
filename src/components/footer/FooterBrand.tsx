@@ -64,7 +64,7 @@ const FooterBrand: React.FC = () => {
         </a>
         
         <a 
-          href="https://www.aiwebtools.ai"
+          href="https://aiwebtools.lovable.app/?via=aiwebtools"
           target="_blank" 
           rel="noopener noreferrer"
           className="w-10 h-10 neo-glass rounded-full flex items-center justify-center hover:bg-matrix-green/10 transition-colors"
