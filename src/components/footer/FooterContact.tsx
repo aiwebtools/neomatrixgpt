@@ -29,7 +29,7 @@ const FooterContact: React.FC = () => {
       
       <div className="mt-8">
         <a 
-          href="https://www.aiwebtools.ai"
+          href="https://aiwebtools.lovable.app/?via=aiwebtools"
           target="_blank" 
           rel="noopener noreferrer"
           className="neo-button text-sm px-4 py-2 rounded-full"
