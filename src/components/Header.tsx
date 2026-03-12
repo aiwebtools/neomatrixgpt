@@ -117,8 +117,8 @@ const Header: React.FC = () => {
       
       {/* Mobile Menu */}
       <div 
-        className={`md:hidden bg-matrix-black/95 backdrop-blur-md absolute w-full transition-all duration-300 ease-in-out overflow-hidden ${
-          isMenuOpen ? 'max-h-96 border-t border-matrix-green/30 opacity-100' : 'max-h-0 opacity-0'
+        className={`md:hidden bg-matrix-black/95 backdrop-blur-md absolute w-full transition-all duration-200 ease-out overflow-hidden ${
+          isMenuOpen ? 'max-h-[80vh] border-t border-matrix-green/30 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
         }`}
       >
         <div className="container mx-auto px-4 py-4 space-y-4">
